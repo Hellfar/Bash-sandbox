@@ -1,7 +1,16 @@
 #!/bin/bash
 
-PATTERN="$1"
-FILE="$2"
+if [ -n "$1" ]; then
+  PATTERN="$1"
+else
+  PATTERN=".*"
+fi
+
+if [ -n "$2" ]; then
+  FILE="$2"
+else
+  FILE="conf.ini"
+fi
 
 GROUP="default"
 
