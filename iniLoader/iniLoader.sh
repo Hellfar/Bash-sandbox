@@ -16,6 +16,8 @@ GROUP="default"
 
 cat $FILE | while read line; do
   case "$line" in
+    "")
+      ;;
     "`echo "$line" | grep '\[.*\]'`")
       GROUP=${line:1: -1}
       ;;
